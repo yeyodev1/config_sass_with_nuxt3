@@ -1,0 +1,18 @@
+//colors
+@import './colorVariables';
+
+// typography
+@import './externalVariables';
+
+$font: 'Strait', sans-serif;
+
+$size: 1rem;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  color: $green;
+}
