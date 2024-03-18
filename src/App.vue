@@ -1,14 +1,15 @@
 <template>
   <div class="container">
-    <div class="welcome">
-      <h1>Bienvenidos a mi Blogggg</h1>
+    <div class="container-welcome">
+      <h1 class="container-welcome-title">Bienvenidos a mi Blogggg</h1>
       <img 
         src="https://i.pinimg.com/236x/b6/ef/77/b6ef77457af02e5a597703e4903a1dad.jpg"
-        alt="Imagen descriptiva">
-      <p class="">
+        alt="Imagen descriptiva"
+        class="container-welcome-image">
+      <p class="container-welcome-description">
         Esta es una super descripción genérica para el blog de como usar sass. Aquí podrás encontrar contenido sobre programación, tecnología, y mucho más.
       </p>
-      <div class="social-media">
+      <div class="container-welcome-social">
         <a 
           href="https://facebook.com"
           target="_blank">
@@ -35,39 +36,43 @@
   </div>
 </template>
 
-<style>
-.welcome {
-  text-align: center;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.welcome img {
-  margin-top: 20px;
-  width: 150px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.social-media {
-  margin-top: 20px;
-}
-
-.social-media a {
-  margin: 0 10px;
-}
-
-.social-media img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s ease;
-}
-
-.social-media img:hover {
-  transform: scale(1.1);
+<style lang="scss">
+.container {
+  &-welcome {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    &-title {
+      font-size: 24px;
+    }
+    &-image {
+      margin-top: 20px;
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
+    &-description {
+      font-size: 24px;
+      color: $pink;
+    }
+    &-social {
+      margin-top: 20px;
+      display: flex;
+      gap: 16px;
+      img {
+        border-radius: 8px;
+        width: 60px;
+        height: 60px;
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
 }
 </style>
